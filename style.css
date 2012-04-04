@@ -1,0 +1,280 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, #header, hgroup, 
+menu, #nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, #header, hgroup, menu, #nav, section {
+	display: block;
+}
+body {
+	line-height: 1.3em;
+	color: #676767;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; 
+	font-weight: 300;
+	background: -moz-linear-gradient(center top , #FFFFFF 0%, #AAAAAA 100%);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* BEGIN NORMAL STYLING
+-------------------------------------------------------------------*/
+
+h1 {
+	text-align:center;
+	font-weight: bold;
+	font-size: 3em;
+	line-height: 1em;
+	height: 165px;
+	margin-top: 15px;
+	text-indent:-5000em;
+	background: url("images/header.png") no-repeat center top;
+}
+
+header {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#gridContainer {
+	padding-top: 30px;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	padding-top: 30px;
+	border-top: 1px dashed #aaa;
+}
+
+#gridContainer h2 {
+	Font-weight:bold;
+	font-size:1.2em;
+}
+
+#gridContainer > div {
+	float:left;
+	margin-right: 40px;
+	margin-bottom:40px;
+}
+
+#gridContainer #library {
+	background: #313131 url("images/woodgrain-dark.jpg");
+	color: #fff;
+	width: 250px;
+	padding: 0;
+	box-shadow: none !important;
+	cursor:default;
+}
+
+#gridContainer #library .header {
+	padding: 2.5em 25px 12px 25px;
+	background:-moz-linear-gradient(center top, #5a5a5a 0%, #4c4c4c 100%);
+	border-bottom: 1px solid #5e5e5e;
+	margin-bottom: 1.5em;
+}
+
+#gridContainer #library ul {
+	font-size:.85em;
+	margin-top:1em;
+	padding-bottom: 3em;
+}
+
+#gridContainer #library ul li {
+	padding: 7px 25px;
+	cursor:pointer;
+	background: transparent;
+	-moz-transition-property: background, color, text-shadow, margin, border, padding;
+	-moz-transition-duration: .25s;
+	position:relative;
+	margin-right: 60px;
+}
+
+#gridContainer #library ul li:hover {
+	color: #ff569a;
+	text-shadow: 1px 1px 3px #000;
+	background: #000;
+	margin-right: 30px;
+	margin-left: -3px;
+	padding-left: 28px;
+	border-radius: 3px 0 0 3px;
+}
+
+#gridContainer #library ul li:hover:after {
+	content: ' ';
+	border-top: 18px solid transparent; 
+	border-left: 18px solid #000; 
+	border-bottom: 18px solid transparent; 
+	position: absolute;
+	right: -18px;
+	top: 0;
+}
+
+#gridContainer #library ul li.smart {
+	color:#f1a058;
+}
+
+#gridContainer #library ul li.selected {
+	background: #ee468a;
+	color: #fff;
+	font-weight: bold;
+	box-shadow: 0 1px 1px #000;
+	position: relative;
+	margin-right: 30px;
+	margin-left: -3px;
+	border-radius: 3px 0 0 3px;
+	padding-left: 28px;
+}
+
+#gridContainer #library ul li.selected:after {
+	content: ' ';
+	border-top: 18px solid transparent; 
+	border-left: 18px solid #ee468a; 
+	border-bottom: 18px solid transparent; 
+	position: absolute;
+	right: -18px;
+	top: 0;
+}
+
+#gridContainer .element {
+	width: 220px;
+	position:absolute;
+	background:#fff;
+	padding:15px;
+	box-shadow: 0 0 2px rgba(0,0,0,.5);
+	-moz-transition-property: box-shadow, left, top, color, border-radius;
+	-moz-transition-duration: .5s;
+	cursor:pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+#gridContainer .element:HOVER {
+	box-shadow: 0 0 10px rgba(0,0,0,1);
+	color: #000;
+	border-radius: 5px;
+}
+
+#gridContainer .element h3 {
+	padding-top:3px;
+}
+
+#gridContainer .element .primitive {
+	height:160px;
+	background: #29e0ff;
+	-moz-transition-property: background-color, border-radius;
+	-moz-transition-duration: .5s;
+	margin-bottom: 5px;
+}
+
+#gridContainer .element:hover .primitive {
+	background: #ee468a;
+	-moz-transition-delay: 0s;
+	border-radius: 180px;
+}
+
+#gridContainer .element.image .primitive {
+	height:290px;
+}
+
+#gridContainer .element.wide {
+	width: 485px;
+}
+
+#gridContainer .element.wide .description {
+	font-size: inherit;
+}
+
+#gridContainer .element.wide h3 {
+	font-size:1.3em;
+}
+
+#gridContainer .element.tall .primitive {
+	height:650px;
+}
+
+#gridContainer .element .description {
+	font-size:.8em;
+	line-height:1.3em;
+	margin-bottom: 1.3em;
+	margin-left: 55px;
+}
+
+#gridContainer .element .thumbnail {
+	float:left;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+#gridContainer .element .tags {
+	padding-top:5px;
+	font-size:.8em;
+	margin-top:5px;
+}
+
+#gridContainer .element .tags li {
+	float:left;
+	background: #ddd;
+	margin-right:1px;
+	margin-bottom:5px;
+	padding: 7px 15px;
+	-moz-transition-property: background, color;
+	-moz-transition-duration: .25s;
+	font-weight:bold;
+	font-size: .85em;
+}
+
+#gridContainer .element .tags li:first-child {
+	border-radius:7px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#gridContainer .element .tags li:last-child {
+	border-radius:7px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#gridContainer .element .tags li:hover {
+	background: #ee468a;
+	color: #fff;
+}
